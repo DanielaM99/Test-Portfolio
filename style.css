@@ -1,0 +1,761 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;;
+    background: linear-gradient(to right, #e0b4e0, #aed6f1);
+}
+
+/*Header*/
+.nav{
+    width: 100%;
+    height: 100%;
+    background: #faf8f8
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    background: linear-gradient(to right, #e0b4e0, #aed6f1);;
+}
+
+.menu{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    position: fixed;
+    right: 5em;
+}
+
+.menu li{
+    list-style: none;
+}
+
+.menu a{
+    color:  #000;
+    background: transparent;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 1em;
+    transition: 0.5s;
+    position: relative;
+}
+
+.menu a:hover{
+    background: #e0b4e0;
+    letter-spacing: 0.1em;
+    box-shadow: 0 0 35px #e0b4e0;
+}
+
+.menu a::before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+}
+
+/*Home section*/
+.home {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 5em;
+    padding: 10em;
+}
+
+.home h1 {
+    color: #ffffffa9;
+    font-size: 8em;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #000000, 0 4px 0 #000000, 0 5px 0 #000000, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(114, 112, 112, 0.117), 0 20px 20px rgba(92, 92, 92, 0.097);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 1em;
+    }
+
+    .menu {
+        width: 100%; 
+        position: static; 
+        right: auto;
+        margin-top: 1em; 
+        justify-content: center; 
+        flex-wrap: wrap; 
+    }
+
+    .menu li {
+        margin: 0.5em; 
+    }
+
+    .menu a {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    .home {
+        padding: 5em 1em;
+        min-height: auto; 
+    }
+
+    .home h1 {
+        font-size: 4em; 
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.5em;
+    }
+
+    .menu {
+        flex-direction: column; 
+        margin-top: 0.5em;
+    }
+
+    .menu li {
+        margin: 0.3em 0;
+    }
+
+    .menu a {
+        font-size: 0.8em;
+        padding: 6px 10px;
+    }
+
+    .home {
+        padding: 3em 0.5em; 
+    }
+
+    .home h1 {
+        font-size: 2.5em; 
+        margin-top: 4em;
+    }
+}
+
+/*About me section*/
+.about{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    width: 100%;
+    align-items: center;
+}
+
+.about img{
+    width: 25rem;
+    height: 60%;
+    grid-column: 2/5;
+    object-fit: contain;
+}
+
+.about-info{
+    grid-column: 5/10;
+    padding: 3em;
+    margin-top:80px;
+}
+
+.about-info h2{
+    font-size: 2em;
+    color: #000;
+}
+
+.h2{
+    list-style: none;
+    letter-spacing: 5px;
+}
+.h2:first-of-type {
+    animation: showup 4s infinite;
+}
+
+/* Animation */
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:0;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+.divider{
+    height: 4px;
+    width: 180px;
+    background-color: purple;
+    margin-top: 1rem;
+    margin-bottom: 3em;
+}
+
+.about p{
+    margin-bottom: 2em;
+}
+
+.app{
+    margin-top: 1.2rem;
+    font-size: 8em;
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #000000, 0 4px 0 #000000, 0 5px 0 #000000, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(114, 112, 112, 0.117), 0 20px 20px rgba(92, 92, 92, 0.097);
+}
+
+@media (max-width: 768px) {
+    /* Header */
+    .navbar {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1em;
+        align-items: center; 
+    }
+
+    .menu li {
+        margin: 1vh 0; 
+    }
+
+    
+    .about img {
+        width: 90%; 
+        margin-bottom: 1em
+    }
+
+    .about-info {
+        padding: 1.5em;
+    }
+
+    .about-info h2 {
+        font-size: 1.8em;
+    }
+
+    .divider {
+        width: 150px;
+    }
+
+    .app {
+        font-size: 4em; 
+    }
+}
+
+@media (max-width: 480px) {
+    /* Header */
+    .navbar {
+        padding: 1vw;
+    }
+
+    .menu a {
+        font-size: 1em; 
+        padding: 6px 12px;
+    }
+
+    /* about setion */
+    .about {
+        padding: 1em;
+        display: flex;
+    }
+
+    .about img {
+        display: none;
+    }
+
+    .about-info h2 {
+        font-size: 1.5em;
+    }
+
+    .divider {
+        width: 150px;
+    }
+
+    .about p {
+        font-size: 0.9em;
+        justify-content: center;
+    }
+
+    .app {
+        font-size: 3em; 
+        gap: 15px;
+    }
+
+    .footer h2 {
+        font-size: 1.2em;
+    }
+
+    .sotial-network a {
+        font-size: 1.8em;
+        margin: 0 10px;
+    }
+}
+
+/*projects section */
+.h2-proyects{
+    display: flex;
+    margin-left: 80px;
+    animation: 4s waves infinite;
+    display: inline-block;
+}
+
+.divider1{
+    height: 4px;
+    width: 135px;
+    background-color: purple;
+    display: flex;
+    margin-left: 80px;
+    margin-bottom: 3em;
+}
+
+/*Animation*/
+@keyframes waves{
+    0%, 40%, 100%{
+        transform: translateY(0px);
+    }
+    20%{
+        transform: translateY(-30px);
+    }
+}
+
+.proyects{
+    width: 100%;
+    color: #000;
+}
+
+.proyect{
+    width: 100%;
+    padding: 1em;
+}
+
+.proyect h2{
+    font-size: 2em;
+}
+
+.proyects .container{
+    width: 80vw;
+    height: 55vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    width: 300px;
+    color: #fff;
+    height: 400px;
+    background-color: #000000d5;
+    margin: 1.5em;
+}
+
+
+
+.car-img{
+    width: 100%;
+    height: 200px;
+    background-image: url(./Img/inventory\ manager.png);
+    background-size: cover;
+}
+
+.car-img1{
+    width: 100%;
+    height: 200px;
+    background-image: url(./Img/calificaciones.png);
+    background-size: cover;
+}
+
+.car-img2{
+    width: 100%;
+    height: 200px;
+    background-image: url(./Img/PruebaRiwi.png);
+    background-size: cover;
+}
+
+.card-title{
+    padding: 30px;
+    color: #fff;
+}
+
+.proyects-links{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.proyects-links a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.proyects-links a:visited{
+    color: purple;
+    text-decoration: none;
+}
+
+.proyects-links i{
+    font-size: 2em;
+    overflow-y: hidden;
+}
+
+@media (max-width: 768px) {
+    /* Header */
+    .navbar {
+        flex-direction: column; 
+        padding: 2em;
+    }
+
+    .menu {
+        width: 100%;
+        position: static; 
+        justify-content: center; 
+        margin-top: 1em;
+    }
+
+    .menu li {
+        margin: 0.5em; 
+    }
+
+    .menu a {
+        padding: 8px 15px; 
+        font-size: 0.9em;
+    }
+
+    /* Proyects Section */
+    .h2-proyects {
+        margin-left: 20px; 
+        font-size: 1em; 
+    }
+
+    .divider1 {
+        margin-left: 20px; 
+    }
+
+    .proyects .container {
+        flex-direction: column; 
+        height: auto; 
+        width: 90vw; 
+    }
+
+    .card {
+        width: 60%; 
+        margin: 1em auto; 
+        height: auto; 
+    }
+
+    .card-title {
+        padding: 15px; 
+    }
+
+    /* Footer */
+    .footer h2 {
+        font-size: 1em; 
+    }
+
+    .sotial-network a i {
+        font-size: 1.5em; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    /* Header */
+    .menu {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .menu li {
+        margin-bottom: 0.5em; 
+    }
+
+    /* Proyects Section */
+    .h2-proyects {
+        font-size: 1.2em; 
+        margin-left: 10px;
+    }
+
+    .divider1 {
+        width: 100px; 
+        margin-left: 10px;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    .card h2 {
+        font-size: 1.2em; 
+    }
+
+    .card p {
+        font-size: 0.9em; 
+    }
+
+    /* Footer */
+    .footer h2 {
+        font-size: 0.9em;
+    }
+}
+
+/*Contact section*/
+
+#contact{
+    padding-top: 1em;
+}
+
+.h2-contact span{
+    animation: 2s waves infinite;
+    display: inline-block;
+    animation-delay: calc(0.1s * var(--n));
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 6em;
+}
+
+.contact h2{
+    font-size: 3em;
+}
+
+.divider2{
+    height: 4px;
+    width: 260px;
+    background-color: purple;
+    margin-top: 5px;
+    margin-bottom: 3em;
+}
+
+.container-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.form input{
+    padding: 10px 50px;
+    margin-bottom: 1em;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #000;
+    color: #000;
+}
+
+.contact form{
+    justify-items: center;
+}
+
+
+.form textarea{
+    width: 30em;
+    height: 150px;
+    background: none;
+    color: #000;
+    padding: 2em;
+    border: 1px solid #000;
+}
+
+.button{
+    width:90%;
+    height:2em;
+    background: linear-gradient(to left top, #992a9350 50%, #b3377152 50%);
+    border: none;
+    border-radius: 15px;
+    margin: 1em;
+    color:#fff;
+    font-size: 23px;
+    letter-spacing: 3px;
+    font-family: 'Lato';
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0px;.seccion-centrada {
+    padding: 50px 20px;
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc; 
+    text-align: center; 
+}
+
+.seccion-centrada h1 {
+    color: #333;
+    font-size: 2.5em; 
+    margin: 0; 
+}
+    overflow: hidden;
+    transition: all .5s;
+    box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+}
+
+button:hover{
+    transform: rotate(-3deg) scale(1.1);
+    box-shadow: 0px 3px 5px #0008;
+}
+
+/*Footer*/
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+}
+
+.footer-content h2{
+    font-size: 3em;
+}
+
+.sotial-network{
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+    margin-top: 1em;
+}
+
+.sotial-network i{
+    font-size: 2em;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    /* Header */
+    .navbar {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 1em; 
+    }
+
+    .menu {
+        position: static;
+        width: 100%; 
+        margin-top: 1em; 
+        flex-direction: column; 
+        right: auto;
+        top: auto; 
+        align-items: center; 
+    }
+
+    .menu li {
+        margin-bottom: 0.5em; 
+    }
+
+    .menu a {
+        padding: 8px 15px; 
+        font-size: 0.9em; 
+    }
+
+    /* Contac setion */
+    .contact {
+        padding: 3em 1em;
+    }
+
+    .contact h2 {
+        font-size: 2.5em;
+    }
+
+    .divider2 {
+        width: 200px;
+        margin-bottom: 2em; 
+    }
+
+    .contact-form {
+        width: 90%; 
+    }
+    
+    .form textarea {
+        width: 100%; 
+    }
+
+    .button {
+        width: 100%; 
+        font-size: 1em; 
+    }
+
+    /* Footer */
+    .footer h2 {
+        font-size: 1.5em; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    /* Header */
+    .navbar {
+        padding: 0.5em; 
+    }
+
+    .menu {
+        margin-top: 0.5em;
+    }
+
+    .menu li {
+        margin-bottom: 0.3em;
+    }
+
+    .menu a {
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+
+    /* Contac setion */
+    .contact {
+        padding: 2em 0.5em; 
+    }
+
+    .contact h2 {
+        font-size: 2em;
+        margin-top: 1em;
+    }
+
+    .divider2 {
+        width: 150px;
+        margin-bottom: 1.5em;
+    }
+
+    .contact-form {
+        width: 70%; 
+    }
+
+    .form input,
+    .form textarea {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+
+    .button {
+        height: 2em;
+        font-size: 0.9em;
+        right: 15px;
+    }
+
+    /* Footer */
+    .footer {
+        height: 150px; 
+    }
+
+    .footer h2 {
+        font-size: 1.2em;
+    }
+
+    .sotial-network {
+        width: 150px; 
+    }
+
+    .sotial-network i {
+        font-size: 1.5em; 
+    }
+}
