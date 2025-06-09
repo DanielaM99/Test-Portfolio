@@ -144,6 +144,7 @@ body {
 
 /*About me section*/
 .about{
+    margin-top: 2em;
     display: grid;
     grid-template-columns: repeat(10,1fr);
     width: 100%;
